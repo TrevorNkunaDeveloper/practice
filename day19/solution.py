@@ -1,7 +1,8 @@
 def safe_divide(a,b):
-    if b == 0:
+    try:
+        return a/float(b)
+    except:
         return ("Cannot divide by zero")
 
-    return a/float(b)
 
-print(safe_divide(5,0))
+print(safe_divide(5,10))
